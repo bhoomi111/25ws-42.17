@@ -1,0 +1,50 @@
+[project]
+name = "25ws-42-17-scd-template"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.13"
+dependencies = [
+    "ipython<9",
+    "jupyter",
+    "lime>=0.2.0.1",
+    "numpy>=2.3.3",
+    "pandas>=2.3.2",
+    "ruff>=0.13.2",
+    "scikit-learn>=1.7.2",
+    "seaborn>=0.13.2",
+    "shap>=0.48.0",
+]
+
+[tool.ruff.lint]
+select = ["ALL"]
+fixable = ["ALL"]
+ignore = [
+    "ANN401",  # any
+    "C901",    # too complex
+    "COM812",  # missing trailing comma  # "D", # all of documentation
+    "D",       # all of documentation
+    "E501",    # line-too-long
+    "ERA001",  # commented-out code
+    "FIX001",  # line contains FIXME
+    "ISC001",  # single line implicit string concat
+    "N806",    # non-lowercase variable
+    "N818",    # Exception should end in "Error"
+    "PGH003",  # specific rule type ignore
+    "S110",    # try-except-pass
+    "S301",    # pickle usage
+    "TD001",   # invalid todo tag
+    "TD002",   # missing todo author
+    "TD003",   # missing todo link
+    "TD004",   # missing todo version
+    "TD005",   # missing todo date
+    "TRY003",  # raise vanilla args
+    "PLR0912", # too many branches
+    "PLR0911", # too many statements
+    "PLR0913", # max num of arguments
+    "PLR0915", # too many lines
+    "PD010",   # pivot table
+    "PT011",   # pytest.raises is too broad
+    "RUF022",  # unsorted all
+    "TC006",   # cast("type")
+]
